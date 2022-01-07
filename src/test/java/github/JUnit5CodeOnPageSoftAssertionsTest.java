@@ -43,7 +43,7 @@ public class JUnit5CodeOnPageSoftAssertionsTest {
         $("#wiki-tab").$(byText("Wiki")).click();
         // check: в заголовке встречается приветствие в wiki
         $(".Layout-main h1").shouldHave(text("Welcome to the selenide wiki!"));
-        //Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
+        //Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions. Открыть страницу
         $("#wiki-pages-filter").setValue("SoftAssertions");
         $("#wiki-pages-box").$(byText("SoftAssertions")).shouldBe(visible).click();
         // check: в заголовке указано SoftAssertions
