@@ -25,14 +25,13 @@ public class DragAndDropTest {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("h3").shouldHave(text("Drag and Drop"));
         $("#column-a").$("header").shouldHave(text("A"));
-        sleep(5000);
         //Перенесите прямоугольник А на место В
         $("#column-a").dragAndDropTo("#column-b"); //Так работает
         //actions().moveToElement($("#column-a")).clickAndHold()
         //        .moveToElement($("#column-b")).release().perform();// Так не работает почему-то ((
         //Проверьте, что прямоугольники действительно поменялись
         $("#column-a").$("header").shouldHave(text("B"));
-        sleep(5000);
+
     }
 
 }
